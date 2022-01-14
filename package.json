@@ -1,0 +1,27 @@
+{
+  "name": "with-typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "rm -r -f .next && next build",
+    "start": "next start",
+    "type-check": "tsc"
+  },
+  "dependencies": {
+    "@material-ui/styles": "^4.11.3",
+    "@rematch/core": "^2.0.1",
+    "@rematch/persist": "^2.0.1",
+    "next": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-redux": "^7.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.21",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "typescript": "4.0"
+  },
+  "license": "MIT"
+}
