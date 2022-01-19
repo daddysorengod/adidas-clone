@@ -30,5 +30,5 @@
     }
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "include": ["**/*.ts", "**/*.tsx", "src/hooks/useWindowDimensions.js", "src/hooks/useWindowSize.js", "src/components/Sidebar/Sidebar.styles.ts"]
 }
