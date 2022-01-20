@@ -8,6 +8,10 @@ import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import { ChildrenMenu } from "./Menu";
+import SportMenu from "./Menu/SportMenu/SportMenu";
+import BrandMenu from "./Menu/BrandMenu/BrandMenu";
+
+
 function Navbar() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
@@ -105,6 +109,7 @@ function Navbar() {
                 className={classes.itemContainer}
                 onMouseOver={() => {
                   setOpenMenu(true)
+                  setMenu(<SportMenu />)
                 }}
               >
                 <a className={classes.item} href="/">
@@ -115,6 +120,7 @@ function Navbar() {
                 className={classes.itemContainer}
                 onMouseOver={() => {
                   setOpenMenu(true)
+                  setMenu(<BrandMenu />)
                 }}
               >
                 <a className={classes.item} href="/">
