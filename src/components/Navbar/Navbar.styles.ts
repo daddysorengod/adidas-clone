@@ -7,6 +7,7 @@ const useStyles = makeStyles(theme => ({
     ["@media (max-width:960px)"]: {
       display: "none",
     },
+    position: 'relative'
   },
   containerTop: {
     display: "flex",

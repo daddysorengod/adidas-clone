@@ -7,10 +7,13 @@ import CustomInput from "../CustomInput/CustomInput";
 import MenuOutlinedIcon from "@material-ui/icons/MenuOutlined";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
-
+import { ChildrenMenu } from "./Menu";
 function Navbar() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const [menu, setMenu] = useState(<></>);
+
 
   const handleOpenMenu = () => {
     setOpen(!open);
@@ -55,6 +58,7 @@ function Navbar() {
                 <MenuOutlinedIcon onClick={handleOpenMenu} />
               </div>
             </div>
+
             <div className={classes.mainLogoContainer}>
               <a className={classes.mainLogo} href="/">
                 <img
@@ -66,27 +70,53 @@ function Navbar() {
             </div>
 
             <div className={classes.menu}>
-              <div className={classes.itemContainer}>
+              <div
+                className={classes.itemContainer}
+                onMouseOver={() => {
+                  setOpenMenu(true)
+                }}
+              >
                 <a className={classes.item} href="/">
                   <strong>Nam</strong>
                 </a>
               </div>
-              <div className={classes.itemContainer}>
+              <div
+                className={classes.itemContainer}
+                onMouseOver={() => {
+                  setOpenMenu(true)
+                }}
+              >
                 <a className={classes.item} href="/">
                   <strong>Nữ</strong>
                 </a>
               </div>
-              <div className={classes.itemContainer}>
+              <div
+                className={classes.itemContainer}
+                onMouseOver={() => {
+                  setOpenMenu(true)
+                  setMenu(<ChildrenMenu />)
+                }}
+              >
                 <a className={classes.item} href="/">
                   <strong>Trẻ em</strong>
                 </a>
               </div>
-              <div className={classes.itemContainer}>
+              <div
+                className={classes.itemContainer}
+                onMouseOver={() => {
+                  setOpenMenu(true)
+                }}
+              >
                 <a className={classes.item} href="/">
                   Thể thao
                 </a>
               </div>
-              <div className={classes.itemContainer}>
+              <div
+                className={classes.itemContainer}
+                onMouseOver={() => {
+                  setOpenMenu(true)
+                }}
+              >
                 <a className={classes.item} href="/">
                   Các nhãn hiệu
                 </a>
@@ -116,7 +146,12 @@ function Navbar() {
               </div>
             </div>
           </div>
+          {openMenu &&
+            <div onMouseLeave={() => { setOpenMenu(false) }}>
+              {menu}
+            </div>}
         </div>
+
       </div>
     </div>
   );
