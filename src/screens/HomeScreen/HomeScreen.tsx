@@ -24,6 +24,7 @@ const HomeScreen = () => {
           summary="Our festival-ready collection has arrived"
           buttonTitle="shop now"
         />
+
         <BannerVideo
           type="light"
           video="https://brand.assets.adidas.com/video/upload/q_auto,vc_auto/video/upload/global%20brand%20publishing/Running/UB22/Educate/running-ss22-ultraboost-launch-hp-masthead-large-d.mp4"

@@ -38,7 +38,7 @@ function BannerVideo({
 
           <div className={classes.contentWrapper}>
             <div className={classes.contentContainer}>
-              <div className={classes.summaryContainer}>
+              <div className={classes.summaryContainer} style={{ color: type === "light" ? "white" : "black" }}>
                 <h1 className={classes.title}>{title}</h1>
                 <p className={classes.summary}>{summary}</p>
               </div>
