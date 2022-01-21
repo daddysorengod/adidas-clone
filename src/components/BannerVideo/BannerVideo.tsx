@@ -1,6 +1,6 @@
 import React from "react";
 import useStyles from "../Banner/Banner.style";
-import Button from "../Button/Button";
+import CTAButton from "../CTAButton/CTAButton";
 import useWindowSize from "@app/hooks/useWindowSize";
 
 function BannerVideo({
@@ -43,7 +43,7 @@ function BannerVideo({
                 <p className={classes.summary}>{summary}</p>
               </div>
 
-              <Button
+              <CTAButton
                 margin={{ margin: "15px 0" }}
                 type={type}
                 title={buttonTitle}

@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
   videoContainer: {
     width: "100%",
-    // objectFit: 'cover',
+    display: 'flex',
     maxHeight: "100vh",
     ["@media (max-width:960px)"]: {
       objectFit: "cover",

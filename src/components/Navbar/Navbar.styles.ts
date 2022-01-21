@@ -1,13 +1,21 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(theme => ({
+  headerContainer: {
+    position: "fixed",
+    background: "white",
+    zIndex: 2,
+    width: "100vw",
+    transition: "transform .4s,opacity .4s",
+    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+    transform: 'translate(0)'
+  },
   wrapperTop: {
     padding: "0 40px",
     color: "black",
     ["@media (max-width:960px)"]: {
       display: "none",
     },
-    position: 'relative'
   },
   containerTop: {
     display: "flex",

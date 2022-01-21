@@ -5,7 +5,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
   },
   container: {
-    padding: "0 0 50px",
+    padding: "50px 0",
   },
   menuRow: {
     display: "flex",

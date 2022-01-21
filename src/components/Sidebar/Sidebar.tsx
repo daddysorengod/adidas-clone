@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import useStyles from "./Sidebar.styles";
 import CloseIcon from "@material-ui/icons/Close";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import MenuSport from "./MenuSidebar/MenuSport/MenuSport";
 
 const menu = [
   { title: "Nam", primary: true },
@@ -14,8 +13,6 @@ const menu = [
 
 const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
   const classes = useStyles();
-  // const [openList, setOpenList] = useState(false)
-  // const [list, setList] = useState(<></>);
 
   const opened = {
     transform: open ? "translateX(0)" : "",
@@ -24,13 +21,6 @@ const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
   const handleCloseMenu = () => {
     setOpen(!open);
   };
-
-  // const handleOpenChild = (item : any) => {
-  //   if (item.title == 'Thể thao') {
-  //     setOpenList(true)
-  //     setList(<MenuSport />)
-  //   }
-  // }
 
   return (
     <div className={classes.wrapper} style={opened}>
