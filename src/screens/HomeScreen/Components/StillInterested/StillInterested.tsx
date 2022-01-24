@@ -13,7 +13,7 @@ export default function StillInterested(props: any) {
             subimg: "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/8c7fcb9d65c143b4a3c8ad7800ac1820_9366/ultraboost-22.jpg",
             img: "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/5ae921bb08034aa2803fad7800abdd7f_9366/ultraboost-22.jpg",
             colors: [
-               
+
             ],
             isNew: true
         },
@@ -203,19 +203,19 @@ export default function StillInterested(props: any) {
             ],
             isNew: true
         },
-        
+
     ]
 
     return <div className={classes.interested} >
-        <Container>
+        <div className={classes.container}>
             <h2 className={classes.h2}>Still interested?</h2>
             <div>
                 <a href="#" className={classes.a}> ULTRABOOST 22</a>
                 <a href="#" className={classes.a}>GIÀY ULTRABOOST 22</a>
             </div>
-        </Container>
+        </div>
         <div className={`interested-carousel ${classes.carousel}`}>
-            <InterestedSlider items={items}/>
+            <InterestedSlider items={items} />
         </div>
     </div>;
 }

@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     height: "100vh",
     position: "fixed",
     background: "white",
-    zIndex: 2,
+    zIndex: 3,
     transform: "translateX(-100%)",
     transition: "transform .4s,opacity .4s",
     transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
@@ -34,6 +34,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    cursor: 'pointer'
   },
   menuItems: {
     paddingTop: "10px",
@@ -49,6 +50,7 @@ const useStyles = makeStyles(theme => ({
   },
   arrowIcon: {
     fontSize: "18px",
+    cursor: 'pointer'
   },
   primary: {
     fontWeight: "bold",

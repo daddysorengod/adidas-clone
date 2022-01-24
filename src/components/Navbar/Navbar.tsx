@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useStyles from "./Navbar.styles";
 import LocalMallOutlinedIcon from "@material-ui/icons/LocalMallOutlined";
 import FavoriteBorderOutlinedIcon from "@material-ui/icons/FavoriteBorderOutlined";
@@ -11,21 +11,38 @@ import { ChildrenMenu } from "./Menu";
 import SportMenu from "./Menu/SportMenu/SportMenu";
 import BrandMenu from "./Menu/BrandMenu/BrandMenu";
 
+import useWindowOffset from "@app/hooks/useWindowOffset";
 
 function Navbar() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
+  const [lastScroll, setLastScroll] = useState(0);
+  const [checkScroll, setCheckScroll] = useState(false);
+  const offset = useWindowOffset();
   const [openMenu, setOpenMenu] = useState(false);
   const [menu, setMenu] = useState(<></>);
-
 
   const handleOpenMenu = () => {
     setOpen(!open);
   };
 
+  useEffect(() => {
+    if (offset > lastScroll) {
+      setCheckScroll(true);
+    } else {
+      setCheckScroll(false);
+    }
+    setLastScroll(offset)
+  }, [offset])
+
+  const movedUp = {
+    transform: checkScroll ? "translateY(-100%)" : "translateY(0)",
+  };
+
   return (
-    <div className="header-light">
+    <div>
       <Sidebar open={open} setOpen={setOpen} />
+      <div className={classes.headerContainer} style={movedUp}>
       <div>
         <Header />
         <div className={classes.wrapperTop}>
@@ -158,6 +175,7 @@ function Navbar() {
             </div>}
         </div>
 
+      </div>
       </div>
     </div>
   );

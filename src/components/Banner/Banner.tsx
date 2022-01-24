@@ -1,6 +1,6 @@
 import React from "react";
 import useStyles from "./Banner.style";
-import Button from "../Button/Button";
+import CTAButton from "../CTAButton/CTAButton";
 
 const Banner = ({ type }: { type: any }) => {
   const classes = useStyles({ type });
@@ -10,7 +10,7 @@ const Banner = ({ type }: { type: any }) => {
       <a href="/vi/season_sale">
         <div className={classes.bannerContainer}>
           <div>
-            <picture>
+            <picture style={{ display: 'flex' }}>
               <source
                 media="(max-width:959px)"
                 srcSet="https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/if_w_gt_960,w_960/viVN/Images/vn-tet-mh-m_tcm337-833760.jpg"
@@ -31,7 +31,7 @@ const Banner = ({ type }: { type: any }) => {
                 </p>
               </div>
 
-              <Button
+              <CTAButton
                 margin={{ margin: "15px 0" }}
                 type="light"
                 title="mua ngay"

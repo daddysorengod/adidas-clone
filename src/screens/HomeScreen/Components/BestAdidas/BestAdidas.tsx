@@ -97,9 +97,9 @@ export default function BestAdidas() {
     })
 
     return <div className='best-adidas' style={{ marginTop: '80px' }}>
-        <Container>
+        <div className={whatHotClasses.container}>
             <h4 className={whatHotClasses.h4}>Best of Adidas</h4>
-            <InnerCarousel items={items} pagination={true} slidesPerGroup={5}/>
-        </Container>
+            <InnerCarousel items={items} pagination={true} slidesPerGroup={5} />
+        </div>
     </div>;
 }

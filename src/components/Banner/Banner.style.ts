@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
   videoContainer: {
     width: "100%",
-    // objectFit: 'cover',
+    display: 'flex',
     maxHeight: "100vh",
     ["@media (max-width:960px)"]: {
       objectFit: "cover",
@@ -41,7 +41,6 @@ const useStyles = makeStyles(theme => ({
   contentContainer: {
     display: "flex",
     flexDirection: "column",
-    color: "white",
     justifyContent: "center",
     width: "33.3333333333%",
     ["@media (max-width:960px)"]: {
@@ -55,7 +54,7 @@ const useStyles = makeStyles(theme => ({
   summaryContainer: {
     fontSize: "18px",
     lineHeight: "24px",
-    color: (props: any) => (props.type === "light" ? "white" : "black"),
+    // color: (props: any) => (props.type === "light" ? "white" : "black"),
   },
   title: {
     fontSize: "42px",
