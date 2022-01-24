@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { makeStyles } from '@material-ui/core/styles';
-import { Widgets } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
     childrenMenu: {
@@ -33,14 +32,14 @@ const useStyles = makeStyles((theme) => ({
     subCol: {
         flex: 1,
         marginRight: '20px',
-        lineHeight: '13px'
+        lineHeight: '16px'
     },
     colHeader: {
-        letterSpacing: '1.87px',
+        letterSpacing: '2px',
         margin: '0 0 14px 0',
         textTransform: 'uppercase',
         fontWeight: 'bold',
-        fontSize: '12px'
+        fontSize: '13px !important' 
     },
     responsiveCol: {
         [theme.breakpoints.up('lg')]: {
@@ -66,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     },
     link: {
         textDecoration: 'none',
-        fontSize: '12px',
+        fontSize: '13px',
         color: 'black',
         "&:hover": {
             textDecoration: 'underline'
@@ -158,7 +157,7 @@ export function ChildrenMenu() {
                     </div>
                     <div className={classes.col}>
                         <div className={classes.colHeader}>
-                            <a href="#" className={classes.link}> Trẻ Nhỏ Và Trẻ Mới Biết Đi (1-4)</a>
+                            <a href="#" className={classes.link}> Trẻ Nhỏ & Trẻ Mới Biết Đi (1-4)</a>
                         </div>
                         <ChildrenMenuColumn array={toddlers} classes={classes} />
                     </div>

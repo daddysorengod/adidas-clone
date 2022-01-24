@@ -3,7 +3,10 @@ import Navbar from "@app/components/Navbar/Navbar";
 import BannerVideo from "@app/components/BannerVideo/BannerVideo";
 import React from "react";
 import MenuTab from "@app/components/MenuTab/MenuTab";
-
+import StillInterested from "./Components/StillInterested/StillInterested";
+import WhatsHot from "./Components/WhatsHot/WhatsHot";
+import NewArrivals from "./Components/NewArrivals/NewArrivals";
+import BestAdidas from "./Components/BestAdidas/BestAdidas";
 const HomeScreen = () => {
   return (
     <div>
@@ -25,7 +28,11 @@ const HomeScreen = () => {
         summary="Được cải tiến với 360˚ cải thiện độ ôm cho nữ để hoàn trả năng lượng tối ưu."
         buttonTitle="mua ngay"
       />
+      <StillInterested />
       <MenuTab />
+      <WhatsHot />
+      <NewArrivals />
+      <BestAdidas />
     </div>
   );
 };

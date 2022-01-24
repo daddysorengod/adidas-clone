@@ -2,12 +2,15 @@ import { AppProps } from "next/app";
 // import "../styles/globals.css";
 import * as React from "react";
 import "../styles/global.css";
+import "../styles/interestedSwiper.css"
+import "../styles/whatsHotSwiper.css"
 import { store } from "../src/store";
 import { Provider } from "react-redux";
 import Head from "next/head";
 import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/theme";
-
+import 'swiper/css'
+import "swiper/css/navigation";
 const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <Provider store={store}>

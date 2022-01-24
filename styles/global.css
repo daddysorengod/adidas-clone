@@ -25,3 +25,58 @@ code {
 a {
   color: unset;
 }
+
+
+
+.swiper{
+  position: unset !important;
+}
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.interested-carousel .swiper-slide {
+  width: 460px !important;
+}
+
+.whats-hot .swiper-slide {
+  width: calc((100% - 8 * 5px) / 4.71) !important;
+}
+
+.new-arrivals .swiper-slide,
+.best-adidas .swiper-slide {
+  width: 16.25% !important;
+}
+
+.new-arrivals  .swiper-pagination-horizontal,
+.best-adidas  .swiper-pagination-horizontal
+{
+  bottom: -20px !important;
+}
+
+
+.new-arrivals .swiper-pagination-bullet ,
+.best-adidas .swiper-pagination-bullet
+{
+  width: 18px;
+  height: 1px;
+  border-radius: unset;
+  background-color: black;
+  opacity: unset;
+  transition: all 0.1s ease-out;
+}
+
+.new-arrivals .swiper-pagination-bullet-active ,
+.best-adidas .swiper-pagination-bullet-active
+{
+  height: 4px;
+}
+
+.new-arrivals .swiper-pagination-bullet:hover ,
+.best-adidas .swiper-pagination-bullet:hover 
+{
+  height: 4px;
+  background-color: black !important;
+}
+
