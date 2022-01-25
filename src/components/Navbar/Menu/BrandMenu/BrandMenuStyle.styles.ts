@@ -6,8 +6,12 @@ export const useStyles = makeStyles({
         display: 'flex',
         flexDirection: 'column',
         position: 'absolute',
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        borderTop : '1px solid rgb(223,219,219)'
 
+    },
+    boxCato: {
+        margin :'auto'
     },
     lable : {
         display: 'flex'
@@ -17,6 +21,7 @@ export const useStyles = makeStyles({
         flex: '1',
         display: 'flex',
         flexDirection: 'column',
+        width:'auto'
     },
     space : {
         width: '25px',
