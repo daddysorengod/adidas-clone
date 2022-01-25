@@ -93,13 +93,13 @@ export default function BestAdidas() {
     ]
 
     const items = products.map(p => {
-        return <ProductCard item={p} inList={true} />
+        return <ProductCard item={p} inList={true} flexWidthBottom={true} />
     })
 
     return <div className='best-adidas' style={{ marginTop: '80px' }}>
         <div className={whatHotClasses.container}>
             <h4 className={whatHotClasses.h4}>Best of Adidas</h4>
-            <InnerCarousel items={items} pagination={true} slidesPerGroup={5} />
+            <InnerCarousel items={items} pagination={true} slidesPerGroup={5} className={"best-adidas"} />
         </div>
     </div>;
 }

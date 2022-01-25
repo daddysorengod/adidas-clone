@@ -26,9 +26,7 @@ a {
   color: unset;
 }
 
-
-
-.swiper{
+.swiper {
   position: unset !important;
 }
 
@@ -41,7 +39,12 @@ a {
 }
 
 .whats-hot .swiper-slide {
-  width: calc((100% - 8 * 5px) / 4.71) !important;
+  width: 322px !important;
+}
+
+.product-carousel .swiper-slide {
+  width: 50px !important;
+  height: 50px !important;
 }
 
 .new-arrivals .swiper-slide,
@@ -49,16 +52,13 @@ a {
   width: 16.25% !important;
 }
 
-.new-arrivals  .swiper-pagination-horizontal,
-.best-adidas  .swiper-pagination-horizontal
-{
+.new-arrivals .swiper-pagination-horizontal,
+.best-adidas .swiper-pagination-horizontal {
   bottom: -20px !important;
 }
 
-
-.new-arrivals .swiper-pagination-bullet ,
-.best-adidas .swiper-pagination-bullet
-{
+.new-arrivals .swiper-pagination-bullet,
+.best-adidas .swiper-pagination-bullet {
   width: 18px;
   height: 1px;
   border-radius: unset;
@@ -67,16 +67,25 @@ a {
   transition: all 0.1s ease-out;
 }
 
-.new-arrivals .swiper-pagination-bullet-active ,
-.best-adidas .swiper-pagination-bullet-active
-{
+.new-arrivals .swiper-pagination-bullet-active,
+.best-adidas .swiper-pagination-bullet-active {
   height: 4px;
 }
 
-.new-arrivals .swiper-pagination-bullet:hover ,
-.best-adidas .swiper-pagination-bullet:hover 
-{
+.new-arrivals .swiper-pagination-bullet:hover,
+.best-adidas .swiper-pagination-bullet:hover {
   height: 4px;
   background-color: black !important;
 }
 
+@media (max-width: 960px) {
+  .whats-hot .swiper-slide {
+    width: 322px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .whats-hot .swiper-slide {
+    width: 364px !important;
+  }
+}

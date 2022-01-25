@@ -9,9 +9,9 @@ import "swiper/css/navigation"
 SwiperCore.use([Pagination, Navigation]);
 
 export default function InnerCarousel(props: any) {
-  const { items } = props;
+  const { items , className, slidesPerGroup} = props;
 
-  return <div className='whats-hot' style={{ position: 'relative' }}>
+  return <div className={`${className} inner-carousel`} style={{ position: 'relative' }}>
     <Swiper
       slidesPerView={"auto"}
       className="mySwiper"
