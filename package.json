@@ -8,13 +8,17 @@
     "type-check": "tsc"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.3",
     "@rematch/core": "^2.0.1",
     "@rematch/persist": "^2.0.1",
     "next": "latest",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-redux": "^7.2.4"
+    "react-redux": "^7.2.4",
+    "react-slideshow-image": "^3.6.1",
+    "swiper": "^7.4.1"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",

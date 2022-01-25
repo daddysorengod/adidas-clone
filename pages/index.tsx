@@ -1,7 +1,3 @@
-const IndexPage = () => (
-  <div>
-    <h1>Hello Next.js 👋</h1>
-  </div>
-);
+import HomeScreen from "@app/screens/HomeScreen/HomeScreen";
 
-export default IndexPage;
+export default HomeScreen;
