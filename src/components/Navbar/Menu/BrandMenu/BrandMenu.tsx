@@ -48,6 +48,9 @@ const BrandMenu = () => {
 
   return (
     <div className={classes.cacto}>
+      <div className={classes.boxCato}>
+
+      
       <div className={classes.lable}>
         <div className={classes.boxLable}>
           {originals.map((original, index) => {
@@ -97,6 +100,7 @@ const BrandMenu = () => {
             {footer.title}
           </h6>
         ))}
+      </div>
       </div>
     </div>
   );

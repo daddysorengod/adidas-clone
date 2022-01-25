@@ -1,25 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import useStyles from "./Sidebar.styles";
 import CloseIcon from "@material-ui/icons/Close";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import MenuSport from "./MenuSidebar/MenuSport/MenuSport";
+import MenuTeenager from "./MenuSidebar/MenuKid/MenuKid";
+import MenuBranch from "./MenuSidebar/MenuBranch/MenuBranch";
 
 const menu = [
   { title: "Nam", primary: true },
   { title: "Nữ", primary: true },
   { title: "Trẻ em", primary: true },
-  { title: "Thể thao", primary: false },
+  { title: "Thể Thao", primary: false },
   { title: "Các nhãn hiệu", primary: false },
 ];
 
 const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
   const classes = useStyles();
-
+  const [openSport, setOpenSport] = useState(false);
+  const [openKid, setOpenKid] = useState(false);
+  const [openBranch, setOpenBranch] = useState(false);
   const opened = {
     transform: open ? "translateX(0)" : "",
   };
 
   const handleCloseMenu = () => {
     setOpen(!open);
+  };
+
+  const handleOpenMenu = (item: any) => {
+    if (item.title == "Thể Thao") {
+      setOpenSport(true);
+    } else if (item.title == "Trẻ em") {
+      setOpenKid(true);
+    } else if (item.title == "Các nhãn hiệu") {
+      setOpenBranch(true);
+    }
   };
 
   return (
@@ -40,6 +55,7 @@ const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
             className={`${classes.item} ${classes.upper} ${
               item.primary && classes.primary
             }`}
+            onClick={() => handleOpenMenu(item)}
           >
             {item.title}
             <ArrowForwardIosIcon className={classes.arrowIcon} />
@@ -79,6 +95,13 @@ const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
           </a>
         </div>
       </div>
+      {
+        <>
+          <MenuSport open={openSport} setOpen={setOpenSport} />
+          <MenuTeenager open={openKid} setOpen={setOpenKid} />
+          <MenuBranch open={openBranch} setOpen={setOpenBranch} />
+        </>
+      }
     </div>
   );
 };

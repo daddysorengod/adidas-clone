@@ -8,8 +8,10 @@ export const useStyle = makeStyles({
     width: '100vw',
     height: 'auto',
     position: 'absolute',
-    backgroundColor : '#fff'
+    backgroundColor : '#fff',
+    borderTop : '1px solid rgb(223,219,219)'
   },
+
   menuSport: {
     width: "100vw",
     display: "flex",
