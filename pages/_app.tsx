@@ -4,6 +4,8 @@ import * as React from "react";
 import "../styles/global.css";
 import "../styles/interestedSwiper.css"
 import "../styles/whatsHotSwiper.css"
+import "../styles/productMiniSwiper.css"
+
 import { store } from "../src/store";
 import { Provider } from "react-redux";
 import Head from "next/head";

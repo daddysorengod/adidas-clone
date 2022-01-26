@@ -1,5 +1,5 @@
-.whats-hot .swiper-button-next,
-.whats-hot .swiper-button-prev {
+.inner-carousel .swiper-button-next,
+.inner-carousel .swiper-button-prev {
     position: absolute;
     top: 50%;
     background-color: white;
@@ -8,21 +8,21 @@
     border: 1px solid black;
 }
 
-.whats-hot .swiper-button-next {
+.inner-carousel .swiper-button-next {
     right: 0;
 
 }
 
-.whats-hot .swiper-button-prev {
+.inner-carousel .swiper-button-prev {
     left: 0;
 }
 
-.whats-hot .swiper-button-prev::after,
-  .whats-hot .swiper-button-next::after {
+.inner-carousel .swiper-button-prev::after,
+  .inner-carousel .swiper-button-next::after {
     color: black !important;
     font-size: 24px !important;
   }
 
-.whats-hot .swiper-button-disabled {
+.inner-carousel .swiper-button-disabled {
     visibility: hidden !important;
 }

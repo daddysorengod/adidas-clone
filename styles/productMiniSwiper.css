@@ -1,0 +1,25 @@
+.product-carousel .swiper-button-prev {
+  position: absolute !important;
+  width: 24px !important;
+  height: 100%;
+  left: 0 !important;
+  top: 22px !important;
+  background-color: white;
+  opacity: unset;
+  z-index: 1000;
+}
+
+.product-carousel .swiper-button-disabled {
+  display: none !important;
+}
+
+.product-carousel .swiper-button-next {
+  position: absolute !important;
+  width: 24px !important;
+  height: 100%;
+  right: 0 !important;
+  top: 22px !important;
+  background-color: white;
+  opacity: unset;
+  z-index: 1000;
+}

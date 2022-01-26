@@ -76,7 +76,12 @@ export default function NewArrivals() {
     return <div className="new-arrivals" style={{ marginTop: '80px' }}>
         <div className={classes.container}>
             <h4 className={whatHotClasses.h4}>New Arrivals</h4>
-            <InnerCarousel pagination={true} items={items} slidesPerGroup={4} />
+            <InnerCarousel
+                pagination={true}
+                items={items}
+                slidesPerGroup={4}
+                className={"new-arrivals"}
+            />
         </div>
     </div>;
 }
