@@ -7,33 +7,44 @@ function BannerVideo({
   type,
   video,
   videoAlt,
+  img,
+  imgAlt,
   title,
   summary,
   buttonTitle,
 }: {
   type: any;
-  video: any;
-  videoAlt: any;
+  video?: any;
+  videoAlt?: any;
+  img?: any;
+  imgAlt?: any;
   title: any;
   summary: any;
-  buttonTitle: any;
+  buttonTitle?: any;
 }) {
   const classes = useStyles({ type });
-  const dimension = useWindowSize();  
+  const dimension = useWindowSize();
 
   return (
     <section className={classes.bannerWrapper}>
       <a href="/vi/season_sale">
         <div className={classes.bannerContainer}>
           <div>
-            <video
+            {video && <video
               muted
               loop={true}
               autoPlay={true}
               playsInline
               src={dimension.width < 960 ? videoAlt : video}
               className={classes.videoContainer}
-            ></video>
+            ></video>}
+            {
+              img && <img
+                src={img}
+                alt={imgAlt}
+                style={{ width: '100%' }}
+              />
+            }
           </div>
 
           <div className={classes.contentWrapper}>
@@ -43,11 +54,11 @@ function BannerVideo({
                 <p className={classes.summary}>{summary}</p>
               </div>
 
-              <CTAButton
+              {buttonTitle && <CTAButton
                 margin={{ margin: "15px 0" }}
                 type={type}
                 title={buttonTitle}
-              />
+              />}
             </div>
           </div>
         </div>
