@@ -5,6 +5,7 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import MenuSport from "./MenuSidebar/MenuSport/MenuSport";
 import MenuTeenager from "./MenuSidebar/MenuKid/MenuKid";
 import MenuBranch from "./MenuSidebar/MenuBranch/MenuBranch";
+import MaleMenuRes from "./MenuSidebar/MaleMenuRes/MaleMenuRes";
 
 const menu = [
   { title: "Nam", primary: true },
@@ -16,6 +17,7 @@ const menu = [
 
 const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
   const classes = useStyles();
+  const [openMale, setOpenMale] = useState(false);
   const [openSport, setOpenSport] = useState(false);
   const [openKid, setOpenKid] = useState(false);
   const [openBranch, setOpenBranch] = useState(false);
@@ -34,6 +36,8 @@ const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
       setOpenKid(true);
     } else if (item.title == "Các nhãn hiệu") {
       setOpenBranch(true);
+    } else if (item.title == 'Nam') {
+      setOpenMale(true)
     }
   };
 
@@ -97,6 +101,7 @@ const Sidebar = ({ open, setOpen }: { open: any; setOpen: any }) => {
       </div>
       {
         <>
+          <MaleMenuRes open={openMale} setOpen={setOpenMale}/>
           <MenuSport open={openSport} setOpen={setOpenSport} />
           <MenuTeenager open={openKid} setOpen={setOpenKid} />
           <MenuBranch open={openBranch} setOpen={setOpenBranch} />
