@@ -13,15 +13,22 @@ export const useStyles = makeStyles({
     boxCato: {
         margin :'auto'
     },
+    
     lable : {
-        display: 'flex'
+        display: 'flex',
+        justifyContent: 'space-around',
+    },
+    boxOne: {
+        margin: 'auto',
+        display: 'flex',
+        justifyContent:'space-around'
     },
     boxLable : {
         padding: '10px',
-        flex: '1',
+        // flex: '1',
         display: 'flex',
         flexDirection: 'column',
-        width:'auto'
+        width:'auto',
     },
     space : {
         width: '25px',
@@ -39,6 +46,7 @@ export const useStyles = makeStyles({
         listStyle: 'none',
         width: 'fit-content',
         fontSize: '12px',
+        textAlign: 'start',
         cursor: 'pointer',
         '&:hover' : {
             'text-decoration': 'underline',
@@ -48,7 +56,8 @@ export const useStyles = makeStyles({
         display: 'flex',
         width: '100vw',
         height: '30px',
-        border: '1px solid rgb(223,219,219)'
+        border: '1px solid rgb(223,219,219)',
+        justifyContent: 'space-around'
     },
     h6: {
         width: '290px',
@@ -56,7 +65,7 @@ export const useStyles = makeStyles({
         cursor: 'pointer',
         alignSelf: 'center',
         textAlign: 'left',
-        flex: '1'
+        // flex: '1'
     }
 })
 
