@@ -6,6 +6,8 @@ import SwiperCore, {
 
 import "swiper/css/navigation"
 
+SwiperCore.use([Navigation])
+
 
 interface ProductCarouselProps {
     items: any,
@@ -32,7 +34,7 @@ export default function ProductCarousel(props: ProductCarouselProps) {
     }
 
 
-    return <div className='product-carousel' style={{ position: 'relative' }}>
+    return <div className='interested-carousel product-carousel' style={{ position: 'relative' }}>
         <Swiper
             slidesPerView={"auto"}
             className="mySwiper"

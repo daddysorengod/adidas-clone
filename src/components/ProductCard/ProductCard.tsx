@@ -77,7 +77,7 @@ export default function ProductCard(props: ProductCardProps ) {
                         />
                     </a>
                 </div>
-                {(onHover && !inList) && <div className={classes.productCarousel} style={{ marginTop: '2px' }}>
+                {(onHover && !inList && item.colors.length > 0) && <div className={classes.productCarousel} style={{ marginTop: '2px' }}>
                     <ProductCarousel
                         items={item.colors}
                         setOnColorPreview={setOnColorPreview}

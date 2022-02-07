@@ -4,7 +4,7 @@
   height: 100%;
   left: 0 !important;
   top: 22px !important;
-  background-color: white;
+  background-color: white !important;
   opacity: unset;
   z-index: 1000;
 }

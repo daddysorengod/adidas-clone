@@ -55,7 +55,7 @@ export default function ProductGrid() {
                 {
                     mainImg: "https://assets.adidas.com/images/w_383,h_383,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d181481144c24ae3aba5ad7900d3f5c8_9366/ultraboost-22.jpg",
                     subImg: "https://assets.adidas.com/images/w_85,h_85,f_auto,q_auto:sensitive,fl_lossy,c_fill,g_auto/d181481144c24ae3aba5ad7900d3f5c8_9366/ultraboost-22.jpg"
-                }
+                },
             ],
             isNew: true
         },
@@ -207,7 +207,7 @@ export default function ProductGrid() {
 
     const mapDataToProduct = () => {
         return data.map((e: any) => {
-            return <ProductCard item={e} inList={false} />
+            return <ProductCard item={e} inList={false} flexWidthBottom={true} />
         })
     }
 

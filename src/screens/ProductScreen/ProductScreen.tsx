@@ -3,6 +3,7 @@ import Navbar from '@app/components/Navbar/Navbar';
 import { Container } from '@material-ui/core';
 import React from 'react';
 import Menu from './components/Menu/Menu';
+import PageNumber from './components/PageNumber/PageNumber';
 import useStyles from './ProductScreen.styles';
 export default function ProductScreen() {
     const classes = useStyles();
@@ -22,6 +23,19 @@ export default function ProductScreen() {
             <div className={classes.container}>
                 <div>
                     <Menu />
+                </div>
+            </div>
+            <div className={classes.pagination}>
+                <div className={classes.pagePrev}>
+                    <a href="#">Prev</a>
+                </div>
+                <div className={classes.pageNumber}>
+                    <span style={{ marginRight: '10px' }}>Page</span>
+                    <PageNumber />
+                    <span style={{ marginLeft: '10px' }}>of 10</span>
+                </div>
+                <div className={classes.pageNext}>
+                    <a href="#">Next</a>
                 </div>
             </div>
         </div>

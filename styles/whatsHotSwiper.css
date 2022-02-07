@@ -1,28 +1,27 @@
 .inner-carousel .swiper-button-next,
 .inner-carousel .swiper-button-prev {
-    position: absolute;
-    top: 50%;
-    background-color: white;
-    height: 50px;
-    width: 55px;
-    border: 1px solid black;
+  position: absolute;
+  top: 50%;
+  background-color: white;
+  height: 50px;
+  width: 55px;
+  border: 1px solid black;
 }
 
 .inner-carousel .swiper-button-next {
-    right: 0;
-
+  right: 0;
 }
 
 .inner-carousel .swiper-button-prev {
-    left: 0;
+  left: 0;
 }
 
 .inner-carousel .swiper-button-prev::after,
-  .inner-carousel .swiper-button-next::after {
-    color: black !important;
-    font-size: 24px !important;
-  }
+.inner-carousel .swiper-button-next::after {
+  color: black !important;
+  font-size: 24px !important;
+}
 
 .inner-carousel .swiper-button-disabled {
-    visibility: hidden !important;
+  visibility: hidden !important;
 }
