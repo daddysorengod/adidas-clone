@@ -1,16 +1,17 @@
 import Banner from "@app/components/Banner/Banner";
-import Navbar from "@app/components/Navbar/Navbar";
 import BannerVideo from "@app/components/BannerVideo/BannerVideo";
-import React, { useState, useEffect } from "react";
+import Discover from "@app/components/Discover/Discover";
+import Footer from "@app/components/Footer/Footer";
 import MenuTab from "@app/components/MenuTab/MenuTab";
+import Navbar from "@app/components/Navbar/Navbar";
+import Newsletter from "@app/components/Newsletter/Newsletter";
+import React from "react";
+import BestAdidas from "./Components/BestAdidas/BestAdidas";
+import Categories from "./Components/Categories/Categories";
+import NewArrivals from "./Components/NewArrivals/NewArrivals";
 import StillInterested from "./Components/StillInterested/StillInterested";
 import WhatsHot from "./Components/WhatsHot/WhatsHot";
-import NewArrivals from "./Components/NewArrivals/NewArrivals";
-import BestAdidas from "./Components/BestAdidas/BestAdidas";
-import Discover from "@app/components/Discover/Discover";
-import Categories from "./Components/Categories/Categories";
 import useStyles from './HomeScreen.styles';
-import Newsletter from "@app/components/Newsletter/Newsletter";
 
 const HomeScreen = () => {
   const classes = useStyles();
@@ -45,6 +46,7 @@ const HomeScreen = () => {
         <Categories />
         <BestAdidas />
         <Newsletter />
+        <Footer />
       </div>
     </div>
   );
