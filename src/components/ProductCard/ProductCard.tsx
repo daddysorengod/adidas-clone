@@ -3,10 +3,18 @@ import { FavoriteBorder as FavoriteBorderIcon } from '@material-ui/icons'
 // import MiniSlider from '../Slider/MiniSlider';
 import { moneyFormat } from '@app/helpers';
 import useStyles from "./ProductCard.styles";
+import ProductCarousel from '../Carousel/ProductCarousel';
 
 
-export default function ProductCard(props: { item: any, inList: boolean }) {
-    const { item, inList } = props;
+interface ProductCardProps {
+    item: any,
+    inList: boolean,
+    flexWidthBottom?: boolean
+}
+
+export default function ProductCard(props: ProductCardProps ) {
+    const { item, inList, flexWidthBottom } = props;
+
     const [onHover, setOnHover] = useState(false);
     const [onHoverAsset, setOnHoverAsset] = useState(false);
     const [onColorPreview, setOnColorPreview] = useState(null);
@@ -27,6 +35,7 @@ export default function ProductCard(props: { item: any, inList: boolean }) {
         }
         return onHoverAsset ? item.img : item.subimg
     }
+
 
     return (
         <div
@@ -68,13 +77,13 @@ export default function ProductCard(props: { item: any, inList: boolean }) {
                         />
                     </a>
                 </div>
-                {/* {onHover && <div className={classes.productCarousel} style={{ marginTop: '2px' }}>
-                    <MiniSlider
+                {(onHover && !inList) && <div className={classes.productCarousel} style={{ marginTop: '2px' }}>
+                    <ProductCarousel
                         items={item.colors}
                         setOnColorPreview={setOnColorPreview}
                     />
-                </div>} */}
-                <div className={classes.cardDetail} style={{ height: `${inList ? '129px' : '100%'}` }}>
+                </div>}
+                <div className={classes.cardDetail} style={{ height: `${flexWidthBottom ? '100%' : '129px'}` }}>
                     <p className={`${classes.productTitle} ${classes.productParagraph}`}>
                         {item.name}
                     </p>
