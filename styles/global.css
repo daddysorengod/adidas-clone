@@ -53,12 +53,14 @@ a {
 }
 
 .new-arrivals .swiper-pagination-horizontal,
-.best-adidas .swiper-pagination-horizontal {
+.best-adidas .swiper-pagination-horizontal,
+.recently-viewed .swiper-pagination-horizontal {
   bottom: -20px !important;
 }
 
 .new-arrivals .swiper-pagination-bullet,
-.best-adidas .swiper-pagination-bullet {
+.best-adidas .swiper-pagination-bullet ,
+.recently-viewed .swiper-pagination-bullet {
   width: 18px;
   height: 1px;
   border-radius: unset;
@@ -68,14 +70,28 @@ a {
 }
 
 .new-arrivals .swiper-pagination-bullet-active,
-.best-adidas .swiper-pagination-bullet-active {
+.best-adidas .swiper-pagination-bullet-active,
+.recently-viewed .swiper-pagination-bullet-active {
   height: 4px;
 }
 
 .new-arrivals .swiper-pagination-bullet:hover,
-.best-adidas .swiper-pagination-bullet:hover {
+.best-adidas .swiper-pagination-bullet:hover,
+.recently-viewed .swiper-pagination-bullet:hover {
   height: 4px;
   background-color: black !important;
+}
+
+input {
+  border: 1px solid black ;
+}
+
+.newsletter-dialog .MuiDialog-paperWidthSm {
+  max-width: 50% !important;
+}
+
+.newsletter-dialog .MuiDialog-container {
+  position: relative;
 }
 
 @media (max-width: 960px) {

@@ -1,10 +1,11 @@
 import ProductGrid from '@app/components/ProductGrid/ProductGrid';
 import React from 'react';
+import HorizontalBar from '../HorizontalBar/HorizontalBar';
 import useStyles from './Menu.styles';
 export default function Menu() {
     const classes = useStyles();
     return <div style={{ padding: '0 15px' }}>
-        <div className="breadcrumbs">
+        <div className={classes.breadcrumbs}>
             <ul className={classes.ul}>
                 <li>
                     <button className={classes.button}>
@@ -25,7 +26,7 @@ export default function Menu() {
                 </li>
             </ul>
         </div>
-        <div className={classes.title} style={{ marginTop: '30px' }}>
+        <div className={classes.title}>
             <h1 className={classes.h1}>
                 <span>NAM</span>
                 <span style={{ color: '#767677' }}> · </span>
@@ -34,16 +35,8 @@ export default function Menu() {
             &nbsp;
             <div className={classes.totalOfProduct}>[473]</div>
         </div>
-        <div className={classes.horizontalBar}>
-            <div className={classes.horizontalBarItem} style={{ fontWeight: '700' }}>{'Nhãn Hiệu >'}</div>
-            <div className={classes.horizontalBarItem} >{'Thể Thao >'}</div>
-            <div className={classes.horizontalBarItem} >{'Loại Sản Phẩm >'}</div>
-            <div className={classes.horizontalBarItem} >{'Kích Cỡ >'}</div>
-            <div className={classes.horizontalBarItem} >{'Màu >'}</div>
-            <div className={classes.horizontalBarItem} >{'Bộ Sưu Tập >'}</div>
-            <div className={classes.horizontalBarItem} >{'New Arrivals >'}</div>
-        </div>
-        <div style={{ padding: '12px 0' }}>
+        <HorizontalBar />
+        <div className={classes.currentFilter} >
             <a href="" className={classes.filter}>
                 <span style={{ marginRight: '8px' }}>Nam</span>
                 <span style={{ fontSize: '11px' }}>x</span>
@@ -56,6 +49,6 @@ export default function Menu() {
                 <span>Clear All</span>
             </a>
         </div>
-        <ProductGrid/>
-    </div>;
+        <ProductGrid />
+    </div >;
 }

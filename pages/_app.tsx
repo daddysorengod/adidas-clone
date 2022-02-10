@@ -5,6 +5,8 @@ import "../styles/global.css";
 import "../styles/interestedSwiper.css"
 import "../styles/whatsHotSwiper.css"
 import "../styles/productMiniSwiper.css"
+import "../styles/recentlyViewedSwiper.css"
+
 
 import { store } from "../src/store";
 import { Provider } from "react-redux";
@@ -13,14 +15,18 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "../src/theme";
 import 'swiper/css'
 import "swiper/css/navigation";
+
+
 const CustomApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  
+
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <Head>
           <title>Adidas</title>
         </Head>
-        <Component {...pageProps} />
+        <Component {...pageProps}/>
       </ThemeProvider>
     </Provider>
   ); //...pageProps to spread all props passed thru

@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 0 14px 0',
         textTransform: 'uppercase',
         fontWeight: 'bold',
-        fontSize: '13px !important' 
+        fontSize: '13px !important'
     },
     responsiveCol: {
         [theme.breakpoints.up('lg')]: {
@@ -195,8 +195,8 @@ function ChildrenMenuColumn(props: any) {
     const { array, classes } = props;
     return (
         <ul className={classes.ul}>
-            {array.map((e: any) => {
-                return <li key={e} className={`${classes.promo} ${e.title === " " && classes.seperator}`}>
+            {array.map((e: any, index: number) => {
+                return <li key={index} className={`${classes.promo} ${e.title === " " && classes.seperator}`}>
                     <a className={classes.link} href="#">{e.title}</a>
                 </li>
             })}

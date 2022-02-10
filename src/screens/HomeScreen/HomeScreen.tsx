@@ -10,7 +10,7 @@ import BestAdidas from "./Components/BestAdidas/BestAdidas";
 import Discover from "@app/components/Discover/Discover";
 import Categories from "./Components/Categories/Categories";
 import useStyles from './HomeScreen.styles';
-import Newsletter from "@app/components/Newsletter/Newsletter";
+import NewsLetterFooter from "@app/components/NewsLetterFooter/NewsLetterFooter";
 
 const HomeScreen = () => {
   const classes = useStyles();
@@ -44,7 +44,7 @@ const HomeScreen = () => {
         <Discover />
         <Categories />
         <BestAdidas />
-        <Newsletter />
+        <NewsLetterFooter />
       </div>
     </div>
   );

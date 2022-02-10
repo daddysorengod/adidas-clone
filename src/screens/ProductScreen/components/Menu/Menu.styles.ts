@@ -23,11 +23,20 @@ const useStyles = makeStyles((theme) => ({
     },
     title: {
         display: 'flex',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        marginTop: '30px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26px',
+            marginTop: '0px',
+
+        }
     },
     h1: {
         fontWeight: 'normal',
-        fontSize: '42px'
+        fontSize: '42px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '26px',
+        }
     },
     totalOfProduct: {
         fontSize: '12px',
@@ -37,13 +46,58 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'flex-end',
         marginBottom: '10px'
     },
+    currentFilter: {
+        padding: '12px 0',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none !important'
+        }
+    },
+    fixed: {
+        position: 'fixed',
+        left: 0,
+        top: 0,
+        width: '100%',
+        zIndex: 9999,
+        display: 'flex',
+        justifyContent: 'center',
+        transition: "all 0.4s ease-in-out",
+        transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+        transitionDelay: '180ms',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none !important'
+        }
+    },
+    innerFixed: {
+        padding: '5px 10px !important',
+        background: 'white',
+        width: '98% !important',
+        border: '1px solid black !important',
+        maxWidth: '1600px',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none !important'
+        },
+        // [theme.breakpoints.up('sm')]: {
+        //     display: 'none !important'
+        // }
+    },
     horizontalBar: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none !important'
+        },
+    },
+    horizontalBarInner: {
+        width: '100%',
         marginTop: '10px',
         padding: '5px 0',
         borderTop: '1px solid #e9ecef',
         borderBottom: '1px solid #e9ecef',
         display: 'flex',
         flexDirection: 'row',
+        justifyContent: 'space-between',
+
+        // [theme.breakpoints.up('sm')]: {
+        //     display: 'none !important'
+        // }
     },
     horizontalBarItem: {
         height: '40px',
@@ -59,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             border: '1px solid black !important'
         },
-        cursor:'pointer'
+        cursor: 'pointer'
     },
     filter: {
         display: 'inline-block',
@@ -78,6 +132,11 @@ const useStyles = makeStyles((theme) => ({
             backgroundColor: 'black',
             color: 'white'
         },
+    },
+    breadcrumbs: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none !important'
+        }
     }
 }))
 

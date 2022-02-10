@@ -29,8 +29,8 @@ export default function InterestedSlider(props: any) {
             },
         }}
     >
-        {items.map((item: any) => {
-            return <SwiperSlide key={item}>
+        {items.map((item: any, index: number) => {
+            return <SwiperSlide key={index}>
                 <ProductCard item={item} inList={true} flexWidthBottom={true} />
             </SwiperSlide>
         })}

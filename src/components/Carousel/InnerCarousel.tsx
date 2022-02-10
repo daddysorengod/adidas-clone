@@ -8,8 +8,16 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 SwiperCore.use([Pagination, Navigation]);
 
-export default function InnerCarousel(props: any) {
-  const { items , className, slidesPerGroup} = props;
+interface InnerCarouselProps {
+  items: any,
+  className?: string,
+  slidesPerGroup?: number,
+  pagination?: boolean,
+}
+
+
+export default function InnerCarousel(props: InnerCarouselProps) {
+  const { items, className, slidesPerGroup } = props;
 
   return <div className={`${className} inner-carousel`} style={{ position: 'relative' }}>
     <Swiper
@@ -37,8 +45,8 @@ export default function InnerCarousel(props: any) {
         },
       }}
     >
-      {items && items.map((item: any) => {
-        return <SwiperSlide key={item}>
+      {items && items.map((item: any, index: number) => {
+        return <SwiperSlide key={index}>
           {item}
         </SwiperSlide>
       })}

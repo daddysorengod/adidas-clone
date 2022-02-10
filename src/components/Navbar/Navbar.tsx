@@ -10,7 +10,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import { ChildrenMenu } from "./Menu";
 import SportMenu from "./Menu/SportMenu/SportMenu";
 import BrandMenu from "./Menu/BrandMenu/BrandMenu";
-
+import Newsletter from "@app/components/Newsletter/Newsletter";
 import useWindowOffset from "@app/hooks/useWindowOffset";
 import MaleMenu from "./Menu/MaleMenu/MaleMenu";
 
@@ -22,6 +22,15 @@ function Navbar() {
   const offset = useWindowOffset();
   const [openMenu, setOpenMenu] = useState(false);
   const [menu, setMenu] = useState(<></>);
+  const [openNewsLetter, setOpenNewsLetter] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpenNewsLetter(true);
+  };
+
+  const handleClose = () => {
+    setOpenNewsLetter(false);
+  };
 
   const handleOpenMenu = () => {
     setOpen(!open);
@@ -41,153 +50,157 @@ function Navbar() {
   };
 
   return (
-    <div>
-      <Sidebar open={open} setOpen={setOpen} />
-      <div className={classes.headerContainer} style={movedUp}>
-        <div>
-          <Header />
-          <div className={classes.wrapperTop}>
-            <div className={classes.containerTop}>
-              <a href="/" className={classes.itemTop}>
-                trợ giúp
-              </a>
-              <a href="/" className={classes.itemTop}>
-                trình theo dõi đơn hàng
-              </a>
-              <a href="/" className={classes.itemTop}>
-                đăng ký bản tin
-              </a>
-              <a href="/" className={classes.itemTop}>
-                đăng nhập
-              </a>
+    <>
+      <Newsletter open={openNewsLetter} onClose={handleClose} />
 
-              <div className="menu-lang-container">
-                <a className={classes.itemTop} href="/">
-                  <img
-                    src="https://adl-foundation.adidas.com/flags/1-0-0/vn.svg"
-                    alt=""
-                    style={{ width: 20, height: "100%" }}
-                  />
+      <div>
+        <Sidebar open={open} setOpen={setOpen} />
+        <div className={`${classes.headerContainer} nav-bar`} style={movedUp}>
+          <div>
+            <Header />
+            <div className={classes.wrapperTop}>
+              <div className={classes.containerTop}>
+                <a href="/" className={classes.itemTop}>
+                  trợ giúp
                 </a>
-              </div>
-            </div>
-          </div>
-
-          <div className={classes.wrapperBot}>
-            <div className={classes.containerBot}>
-              <div className={classes.hamburgerIcon}>
-                <div className={classes.hamburgerContainer}>
-                  <MenuOutlinedIcon onClick={handleOpenMenu} />
-                </div>
-              </div>
-
-              <div className={classes.mainLogoContainer}>
-                <a className={classes.mainLogo} href="/">
-                  <img
-                    src="https://www.adidas.com.vn/glass/react/445a6c0/assets/img/icon-adidas-logo.svg"
-                    alt="logo"
-                    className={classes.mainLogoImg}
-                  />
+                <a href="/" className={classes.itemTop}>
+                  trình theo dõi đơn hàng
                 </a>
-              </div>
+                <a className={classes.itemTop} onClick={handleClickOpen}>
+                  đăng ký bản tin
+                </a>
+                <a href="/" className={classes.itemTop}>
+                  đăng nhập
+                </a>
 
-              <div className={classes.menu}>
-                <div
-                  className={classes.itemContainer}
-                  onMouseOver={() => {
-                    setOpenMenu(true);
-                    setMenu(
-                      <>
-                        <MaleMenu />
-                      </>,
-                    );
-                  }}
-                >
-                  <a className={classes.item} href="/">
-                    <strong>Nam</strong>
-                  </a>
-                </div>
-                <div
-                  className={classes.itemContainer}
-                  onMouseOver={() => {
-                    setOpenMenu(true);
-                  }}
-                >
-                  <a className={classes.item} href="/">
-                    <strong>Nữ</strong>
-                  </a>
-                </div>
-                <div
-                  className={classes.itemContainer}
-                  onMouseOver={() => {
-                    setOpenMenu(true);
-                    setMenu(<ChildrenMenu />);
-                  }}
-                >
-                  <a className={classes.item} href="/">
-                    <strong>Trẻ em</strong>
-                  </a>
-                </div>
-                <div
-                  className={classes.itemContainer}
-                  onMouseOver={() => {
-                    setOpenMenu(true);
-                    setMenu(<SportMenu />);
-                  }}
-                >
-                  <a className={classes.item} href="/">
-                    Thể thao
-                  </a>
-                </div>
-                <div
-                  className={classes.itemContainer}
-                  onMouseOver={() => {
-                    setOpenMenu(true);
-                    setMenu(<BrandMenu />);
-                  }}
-                >
-                  <a className={classes.item} href="/">
-                    Các nhãn hiệu
-                  </a>
-                </div>
-              </div>
-
-              <div
-                style={{ minWidth: "96px", display: "flex" }}
-                className={classes.menuRight}
-              >
-                <CustomInput />
-
-                <div className={`${classes.rightIcon} ${classes.favoriteIcon}`}>
-                  <a href="/">
-                    <FavoriteBorderOutlinedIcon />
-                  </a>
-                </div>
-
-                <div className={`${classes.rightIcon} ${classes.searchIcon}`}>
-                  <SearchOutlinedIcon />
-                </div>
-
-                <div className={classes.rightIcon}>
-                  <a href="/">
-                    <LocalMallOutlinedIcon />
+                <div className="menu-lang-container">
+                  <a className={classes.itemTop} href="/">
+                    <img
+                      src="https://adl-foundation.adidas.com/flags/1-0-0/vn.svg"
+                      alt=""
+                      style={{ width: 20, height: "100%" }}
+                    />
                   </a>
                 </div>
               </div>
             </div>
-            {openMenu && (
-              <div
-                onMouseLeave={() => {
-                  setOpenMenu(false);
-                }}
-              >
-                {menu}
+
+            <div className={classes.wrapperBot}>
+              <div className={classes.containerBot}>
+                <div className={classes.hamburgerIcon}>
+                  <div className={classes.hamburgerContainer}>
+                    <MenuOutlinedIcon onClick={handleOpenMenu} />
+                  </div>
+                </div>
+
+                <div className={classes.mainLogoContainer}>
+                  <a className={classes.mainLogo} href="/">
+                    <img
+                      src="https://www.adidas.com.vn/glass/react/445a6c0/assets/img/icon-adidas-logo.svg"
+                      alt="logo"
+                      className={classes.mainLogoImg}
+                    />
+                  </a>
+                </div>
+
+                <div className={classes.menu}>
+                  <div
+                    className={classes.itemContainer}
+                    onMouseOver={() => {
+                      setOpenMenu(true);
+                      setMenu(
+                        <>
+                          <MaleMenu />
+                        </>,
+                      );
+                    }}
+                  >
+                    <a className={classes.item} href="/">
+                      <strong>Nam</strong>
+                    </a>
+                  </div>
+                  <div
+                    className={classes.itemContainer}
+                    onMouseOver={() => {
+                      setOpenMenu(true);
+                    }}
+                  >
+                    <a className={classes.item} href="/">
+                      <strong>Nữ</strong>
+                    </a>
+                  </div>
+                  <div
+                    className={classes.itemContainer}
+                    onMouseOver={() => {
+                      setOpenMenu(true);
+                      setMenu(<ChildrenMenu />);
+                    }}
+                  >
+                    <a className={classes.item} href="/">
+                      <strong>Trẻ em</strong>
+                    </a>
+                  </div>
+                  <div
+                    className={classes.itemContainer}
+                    onMouseOver={() => {
+                      setOpenMenu(true);
+                      setMenu(<SportMenu />);
+                    }}
+                  >
+                    <a className={classes.item} href="/">
+                      Thể thao
+                    </a>
+                  </div>
+                  <div
+                    className={classes.itemContainer}
+                    onMouseOver={() => {
+                      setOpenMenu(true);
+                      setMenu(<BrandMenu />);
+                    }}
+                  >
+                    <a className={classes.item} href="/">
+                      Các nhãn hiệu
+                    </a>
+                  </div>
+                </div>
+
+                <div
+                  style={{ minWidth: "96px", display: "flex" }}
+                  className={classes.menuRight}
+                >
+                  <CustomInput />
+
+                  <div className={`${classes.rightIcon} ${classes.favoriteIcon}`}>
+                    <a href="/">
+                      <FavoriteBorderOutlinedIcon />
+                    </a>
+                  </div>
+
+                  <div className={`${classes.rightIcon} ${classes.searchIcon}`}>
+                    <SearchOutlinedIcon />
+                  </div>
+
+                  <div className={classes.rightIcon}>
+                    <a href="/">
+                      <LocalMallOutlinedIcon />
+                    </a>
+                  </div>
+                </div>
               </div>
-            )}
+              {openMenu && (
+                <div
+                  onMouseLeave={() => {
+                    setOpenMenu(false);
+                  }}
+                >
+                  {menu}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

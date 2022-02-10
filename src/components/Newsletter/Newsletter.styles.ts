@@ -1,52 +1,56 @@
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles(() => ({
-  wrapper: {
-    width: "100%",
-    position: "relative",
-    marginTop: "80px",
-    color: 'black',
-    background: '#ede734'
-  },
+
   container: {
-    maxWidth: '960px',
-    width: "100%",
-    margin: "auto",
-    padding: "40px 20px",
-
-    ["@media (min-width:1280px)"]: {
-      width: "1280px",
-    },
-
-    // ["@media (max-width:600px)"]: {
-    //   display: 'flex',
-    //   flexDirection: 'column'
-    // },
+    padding: '20px'
   },
   content: {
-    display: 'flex',
-    ["@media (max-width:960px)"]: {
-      flexDirection: 'column'
-    },
+    paddingRight: '200px'
   },
-  titleNews: {
-    letterSpacing: '1.5px',
+  h1: {
     fontSize: '30px',
+    fontWeight: 600,
     lineHeight: '28px',
-    width: '45.8333333333%',
-    ["@media (max-width:960px)"]: {
-      fontSize: '26px',
+    marginBottom: '30px'
+  },
+  eachForm: {
+    marginTop: '15px',
+    '& .MuiFormControlLabel-label': {
+      fontSize: '16px',
+      fontWeight: '400',
       lineHeight: '24px',
-      width: '100%',
+      fontFamily: 'Noto Sans,Helvetica,Arial'
+    },
+    '& .MuiIconButton-label': {
+      color: 'black',
+    },
+    '& .MuiSvgIcon-root': {
+      fontSize: 30,
+      color: 'black',
     },
   },
-  button: {
-    flex: '1',
-    marginLeft: '4.1666666667%',
-    ["@media (max-width:960px)"]: {
-      marginLeft: 'unset',
-      marginTop: '15px'
-    },
+  checkbox: {
+
+  },
+  radius: {
+  },
+  error: {
+    color: '#e32b2b',
+    fontSize: '14px',
+    marginTop: '5px'
+  },
+  closeBtn: {
+    background: 'white',
+    border: '1px solid black',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    right: '10px',
+    top: '10px',
+    height: '50px',
+    width: '50px'
   }
 }));
 

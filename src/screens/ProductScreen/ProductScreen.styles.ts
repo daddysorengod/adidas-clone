@@ -18,6 +18,11 @@ const useStyles = makeStyles((theme) => ({
             width: '1600px',
         },
     },
+    imageHeader: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
+    },
     title: {
         marginTop: '15px',
         marginBottom: '10px',
@@ -29,13 +34,14 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         marginTop: '60px',
         marginBottom: '40px',
-        padding: '0 30px'
+        padding: '0 15px'
     },
     pageNumber: {
         display: 'flex',
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        fontSize: '14px'
     },
     pagePrev: {
         textDecoration: 'underline',
@@ -61,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '14px',
         fontWeight: 700,
         fontFamily: 'Noto Sans',
-        padding: '15px 30px 15px 20px',
+        padding: '15px 35px 15px 20px',
         cursor: 'pointer',
         "&:hover": {
             background: '#e9ecef !important'
@@ -74,7 +80,8 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: '195px',
         overflowY: 'auto',
         overflowX: 'hidden',
-        width: '100%'
+        width: '100%',
+        zIndex: 99
     },
     li: {
         borderBottom: '1px solid #767677',

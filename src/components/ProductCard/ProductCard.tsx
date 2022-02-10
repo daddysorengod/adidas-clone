@@ -12,7 +12,7 @@ interface ProductCardProps {
     flexWidthBottom?: boolean
 }
 
-export default function ProductCard(props: ProductCardProps ) {
+export default function ProductCard(props: ProductCardProps) {
     const { item, inList, flexWidthBottom } = props;
 
     const [onHover, setOnHover] = useState(false);
@@ -33,7 +33,11 @@ export default function ProductCard(props: ProductCardProps ) {
         if (onColorPreview !== null) {
             return item.colors[onColorPreview].mainImg
         }
-        return onHoverAsset ? item.img : item.subimg
+        if (!item.subimg) {
+            console.log("load nothing");
+            return item.img
+        }
+        return onHoverAsset ? item.subimg : item.img
     }
 
 
